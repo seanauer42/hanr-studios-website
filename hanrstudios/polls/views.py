@@ -73,6 +73,6 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
     #   Always return an HTTPResponseRedirect after successfully dealing
-    #   with POST data. This prvents data from being posted twice if a
+    #   with POST data. This prevents data from being posted twice if a
     #   user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
